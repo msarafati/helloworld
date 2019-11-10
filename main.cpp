@@ -7,12 +7,16 @@ int main(int argc , char *argv[]){
     char options[26] = {'0'};
     vector<string> lines;
     int iter_arg = 0;
+    string branch = "master";
     iter_arg = check_options(argv[1],options);
-    check_branch(argv[1+iter_arg]);
-    string branch = argv[1 + iter_arg];
-    string omgh = argv[2 + iter_arg];
+    if(options[(int)'b' - (int)'a'] == 1){
+        check_branch(argv[1+iter_arg]);
+        branch = argv[1 + iter_arg];
+        iter_arg ++;
+    }
+    string omgh = argv[1 + iter_arg];
     vector<string> faghat_taghire_omgh_lines;
-    lines = read_from_file(".git/logs/refs/heads",branch);
+    lines = read_from_file(".git/logs/refs/remotes/origin",branch);
     faghat_taghire_omgh_lines = faghat_taghire_omgh(lines,branch,omgh);
     //cout<<endl<<"****************"<<endl;   
     //for(int i = 0; i < faghat_taghire_omgh_lines.size(); i++)cout<<faghat_taghire_omgh_lines[i]<<endl;
