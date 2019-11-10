@@ -5,7 +5,7 @@ int check_options(string arg1,char options[]){
     try{
         if(arg1[0] != '-')return 0;
         for(int i = 1;i < arg1.size(); i++){
-            if(arg1[i] != 'f' && arg1[i] != 'p')throw error_bad_option();
+            if(arg1[i] != 'f' && arg1[i] != 'p' && arg1[i] != 'b')throw error_bad_option();
             options[arg1[i] - 'a'] = 1;
         }
     }
