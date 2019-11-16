@@ -7,14 +7,21 @@ class error{
 class error_bad_option:public error{
     public:
         virtual void print(){
-            cout<<"Bad Options!"<<endl;
+            cout<<"error:Bad Options!"<<endl;
             exit(0);
         }
 };
 class error_branch_not_found:public error{
     public:
         virtual void print(){
-            cout<<"Branch is not true value!"<<endl;
+            cout<<"error:Branch is not true value!"<<endl;
+            exit(0);
+        }
+};
+class error_too_low_input:public error{
+    public:
+        virtual void print(){
+            cout<<"error:your inputs are very short!"<<endl;
             exit(0);
         }
 };

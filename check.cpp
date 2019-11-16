@@ -31,3 +31,16 @@ void check_branch(string branch){
         err.print();
     }
 }
+void check_tedad_voroodi(char options[],char* arg[],int &argc){
+    int flag = 1;
+    try{
+        if(options[(int)'b' - (int)'a'] == 1)flag++;
+        //cout<<argc<<endl<<flag<<endl;
+        if(argc - 1<= flag){
+            throw error_too_low_input();
+        }
+    }
+    catch(error_too_low_input err){
+        err.print();
+    }
+}
