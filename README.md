@@ -21,6 +21,7 @@ sal'sal'sax',lx,a'v,lvl'clasl,c',aca'alcal,s'acmssala
 assasasasa
 sassasasaassasasasasassa
 sasasassaasassaassasaassaassassasasas
+<<<<<<< HEAD
 ss
 s
 sa
@@ -35,3 +36,19 @@ sas
 as
 asa
 
+=======
+sssssssssss
+s
+s
+s
+
+s
+s
+s
+s
+
+
+q
+we
+r
+>>>>>>> 10fc428d95818a949df004cae598a820db0de774
